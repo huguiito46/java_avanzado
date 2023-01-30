@@ -13,12 +13,12 @@ public class Main {
 
         while (usuarios.hayMas()) {
             Usuario usuario = usuarios.siguiente();
-            System.out.println("Usuarios son: " + usuario.getNombre()  + " " +usuario.getEdad());
+            System.out.println("UsuariosExcepcion son: " + usuario.getNombre()  + " " +usuario.getEdad());
         }
 
         usuarios.crear(new Usuario("Cinco",18));
         Usuario usuario = usuarios.siguiente();
-        System.out.println("Usuario es : " +usuario.getNombre() + "  " +usuario.getEdad());
+        System.out.println("UsuariosExcepcion es : " +usuario.getNombre() + "  " +usuario.getEdad());
 
 
 
@@ -26,7 +26,7 @@ public class Main {
         usuarios.reinicia();
         while (usuarios.hayMas()) {
             usuario = usuarios.siguiente();
-            System.out.println("Usuarios son: " + usuario.getNombre()  + " " +usuario.getEdad());
+            System.out.println("UsuariosExcepcion son: " + usuario.getNombre()  + " " +usuario.getEdad());
         }
 
 

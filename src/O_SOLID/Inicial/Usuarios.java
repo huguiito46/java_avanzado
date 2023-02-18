@@ -1,24 +1,23 @@
-package arquictetura_limpia_SOLID_BIEN_HECHO;
+package O_SOLID.Inicial;
 
-import java.io.*;
-import java.util.*;
-
-/*
-Esto no se puede hacer en SOLID, además no cumple el principio de abierto o cerrado
- */
+import java.io.File;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Usuarios {
-    public String ficheroDatos = "fichero.txt";
+    public String ficheroDatos = "usuarios.txt";
 
     private ArrayList<Usuario> convertirUsuariosFicheroEnArrayList() {
-        ArrayList<Usuario> usuarios = new ArrayList();
+
+        ArrayList<Usuario> usuarios = new ArrayList<>();
 
         try {
             Scanner scanner = new Scanner(new File(ficheroDatos));
 
             while (scanner.hasNext()) {
                 String usuarioActual = scanner.next();
-                String[] partes = usuarioActual.split(",");
+                String []partes = usuarioActual.split(",");
 
                 Usuario usuario = new Usuario();
                 usuario.nombreUsuario = partes[0];
@@ -32,6 +31,7 @@ public class Usuarios {
 
             scanner.close();
         } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return usuarios;
@@ -96,7 +96,7 @@ public class Usuarios {
                 printStream.println(usuarioComas);
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
-

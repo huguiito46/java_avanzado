@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class UsuariosFichero implements Usuarios {
 
-    private final String ficheroUsuario = "usuarios.txt";
+    private final String ficheroUsuario = "fichero.txt";
     private PrintStream fichero;
 
     public UsuariosFichero() {

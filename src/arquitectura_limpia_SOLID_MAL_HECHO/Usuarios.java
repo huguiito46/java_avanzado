@@ -11,7 +11,7 @@ Esto no se puede hacer en SOLID, además no cumple el principio de abierto o cer
  */
 
 public class Usuarios {
-    public String ficheroDatos = "usuarios.txt";
+    public String ficheroDatos = "fichero.txt";
 
 
     public ArrayList<Usuario> listarUsuarios() {
